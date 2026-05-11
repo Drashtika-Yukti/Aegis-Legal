@@ -1,0 +1,41 @@
+services:
+  aegis-engine:
+    build: 
+      context: ./engine
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    networks:
+      - aegis-net
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:7860/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: always
+
+  aegis-studio:
+    build:
+      context: ./studio
+    ports:
+      - "5173:5173"
+    depends_on:
+      aegis-engine:
+        condition: service_healthy
+    networks:
+      - aegis-net
+    restart: always
+
+  aegis-worker-ingestor:
+    build:
+      context: ./workers/ingestor
+    ports:
+      - "8081:8081"
+    networks:
+      - aegis-net
+    restart: always
+
+networks:
+  aegis-net:
+    driver: bridge

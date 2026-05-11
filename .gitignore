@@ -1,0 +1,58 @@
+# 🛡️ Environment & Secrets
+.env
+.env.*
+SECRET_DO_NOT_PUSH.txt
+*.key
+*.pem
+secrets.txt
+
+# 🐍 Python & Virtual Envs
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 📂 Data & Persistence (BLOCKED)
+data/
+nexus.db
+*.db
+*.sqlite
+*.log
+*.dat
+*.mmap
+
+# 🧪 Development Waste
+scratch/
+evals/
+studio/
+.gemini/
+
+# 🌐 Node / Frontend
+node_modules/
+dist/
+.eslintcache
+.next/
+
+# 🐳 Docker
+.docker/
+docker-compose.override.yml
+
+# 🏗️ Binaries
+workers/ingestor/ingestor
+*.exe
+*.dll
+*.so
+
+# 🍎 OS Cleanup
+.DS_Store
+Thumbs.db
+# Local Storage
+data/qdrant_storage/
+data/*.db
+data/*.pkl
+
