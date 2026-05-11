@@ -9,8 +9,7 @@ pinned: false
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Drashtika-Yukti/Aegis-Legal/main/engine/static/logo.png" width="200" alt="Aegis Legal Logo">
-  <h1>🏛️ Aegis Legal</h1>
+  <h1 style="font-size: 3rem;">🏛️ Aegis Legal</h1>
   <p><b>Precision Legal Intelligence & Secure Cloud-Native RAG</b></p>
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](https://opensource.org/licenses/MIT)

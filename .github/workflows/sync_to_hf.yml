@@ -25,21 +25,11 @@ jobs:
 
       - name: Run Core Security & Integration Tests
         env:
-          # Mock keys for syntax and logic validation
           SUPABASE_URL: "https://mock.supabase.co"
           SUPABASE_SERVICE_ROLE_KEY: "mock-key"
           QDRANT_URL: "http://localhost:6333"
         run: |
-          # We run the test suite to ensure no code regressions
-          # Note: We skip cloud-connection tests in CI to avoid credential exposure
           pytest engine/tests/test_api.py -v -m "not cloud" || echo "Skipping cloud-dependent tests in CI"
-
-      - name: Clean binaries for HF compatibility
-        run: |
-          git config --global user.email "bot@aegis-legal.com"
-          git config --global user.name "Aegis Deploy Bot"
-          git rm engine/static/logo.png
-          git commit -m "chore: remove binary for HF deployment"
 
       - name: Push to Hugging Face
         if: success()
