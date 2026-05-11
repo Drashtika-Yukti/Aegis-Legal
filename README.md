@@ -12,6 +12,8 @@ pinned: false
   <h1 style="font-size: 3rem;">🏛️ Aegis Legal</h1>
   <p><b>Precision Legal Intelligence & Secure Cloud-Native RAG</b></p>
   
+  [![Aegis Production Sync](https://github.com/Drashtika-Yukti/Aegis-Legal/actions/workflows/sync_to_hf.yml/badge.svg)](https://github.com/Drashtika-Yukti/Aegis-Legal/actions/workflows/sync_to_hf.yml)
+  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/ANkur-Garg/Aegis-Legal)
   [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](https://opensource.org/licenses/MIT)
   [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
